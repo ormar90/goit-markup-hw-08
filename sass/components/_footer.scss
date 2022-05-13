@@ -1,0 +1,58 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $footerBackgroundColor;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  &--change-color {
+    color: $mainWhiteColor;
+  }
+}
+
+.footer__list {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer__link {
+  color: $footerAddressColor;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+  
+  @include transition (color);
+}
+
+.footer__link--addres {
+  color: $mainWhiteColor;
+  @include transition (color);
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+
+.footer__social {
+  width: 206px;
+  margin-left: 85px;
+}
+
+.social__link--change-color {
+  background-color: $footerIconBackgroundColor;
+}
+
+.social__icon--change-color {
+  fill: $mainWhiteColor;
+}

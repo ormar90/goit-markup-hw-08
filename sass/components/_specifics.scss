@@ -1,0 +1,27 @@
+.specifics__wrap {
+  background-color: $secondaryBackgroundColor;
+  border-radius: 4px;
+  height: 120px;
+  width: 270px;
+  margin-bottom: 30px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.specifics__list {
+  display: flex;
+  margin-right: calc(-1 * $imgGap);
+}
+
+.specifics__item {
+  flex-basis: calc(100% / 4 - $imgGap);
+  margin-right: $imgGap;
+}
+
+.specifics__text {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}

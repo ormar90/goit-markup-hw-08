@@ -1,0 +1,78 @@
+.title {
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  color: $titleColor;
+
+  &--clients {
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $titleColor;
+    margin-bottom: 50px;
+  }
+
+  &--footer-social {
+    display: block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: $mainWhiteColor;
+  }
+
+  &--hero {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    width: 696px;
+    color: $mainWhiteColor;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+
+  &--modal {
+    display: block;
+    text-align: center;
+    margin-bottom: 12px;  
+    font-size: 20px;
+    line-height: 1.15;
+  }
+
+  &--project {
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+
+  &--specifics {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  &--subscribe {
+    display: block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: $mainWhiteColor;
+  }
+
+  &--team {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+  }
+
+  &--work {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}

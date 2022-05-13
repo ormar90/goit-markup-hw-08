@@ -1,0 +1,37 @@
+.clients__list {
+  display: flex;
+  margin-right: calc(-1 * $imgGap);
+}
+
+.clients__item {
+  flex-basis: calc(100% / 6 - $imgGap);
+  margin-right: $imgGap;
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid $mainIconColor;
+  border-radius: 4px;
+  background-color: $mainWhiteColor;
+  color: $mainIconColor;
+  outline: transparent;
+
+  &:hover,
+  &:focus {
+    border-color: $accentColor;
+    color: $accentColor;
+  }
+
+  @include transition2 (border-color, color);
+
+}
+
+.clients__icon {
+  fill: currentColor;
+}
+

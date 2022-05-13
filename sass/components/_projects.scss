@@ -1,0 +1,69 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-left: calc(-1 * $imgGap);
+  margin-top: calc(-1 * $imgGap);
+}
+
+.project__item {
+  flex-basis: calc(100% / 3 - $imgGap);
+  margin-left: $imgGap;
+  margin-top: $imgGap;
+}
+
+.project__content {
+  padding: 20px 24px;
+  background: $mainWhiteColor;
+  border: $projectsContentBorder;
+  border-top: 0;
+}
+
+.project__subtitle {
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  color: $titleColor;
+}
+
+.project__link {
+  display: block;
+
+  &:hover,
+  &:focus {
+    box-shadow: $projectsHoverBoxShadow;
+  }
+
+  @include transition (box-shadow)
+}
+
+.project__overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.project__text {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  transform: translateY(100%);
+
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  background-color: $backgroundOverlay;
+  color: $mainWhiteColor;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  .project__link:hover &,
+  .project__link:focus & {
+    transform: translateY(0);
+  }
+
+  @include transition (transform)
+}
