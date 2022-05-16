@@ -15,7 +15,7 @@
 
 </head>
 
-<body>
+<body data-menu-body>
   <header class="header">
     <div class="container--header container">
       <a href="#" class="logo header__logo link">Web<span class="logo--change-color">Studio</span></a>
@@ -77,29 +77,31 @@
           </ul>
         </nav>
 
-        <ul class="mobile-menu__contacts-head list">
-          <li class="contacts-head__item"><a href="tel:+380961111111"
-              class="contacts-head__link contacts-head__tel  link">
-              <svg class="contacts-head__icon" width="10px" height="16px">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a>
-          </li>
-          <li class="contacts-head__item "><a href="mailto:info@devstudio.com"
-              class="contacts-head__link contacts-head__mail  link">
-              <svg class="contacts-head__icon " width="16px" height="12px">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a>
-          </li>
-        </ul>
+        <div class="mobile-menu__wrap">
+          <ul class="mobile-menu__contacts-head list">
+            <li class="contacts-head__item"><a href="tel:+380961111111"
+                class="contacts-head__link contacts-head__tel  link">
+                <svg class="contacts-head__icon" width="10px" height="16px">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a>
+            </li>
+            <li class="contacts-head__item "><a href="mailto:info@devstudio.com"
+                class="contacts-head__link contacts-head__mail  link">
+                <svg class="contacts-head__icon " width="16px" height="12px">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a>
+            </li>
+          </ul>
 
-        <ul class="mobile-menu__list list">
-          <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">Instagram</a></li>
-          <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">Twitter</a></li>
-          <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">Facebook</a></li>
-          <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">LinkedIn</a></li>
-        </ul>
+          <ul class="mobile-menu__list list">
+            <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">Instagram</a></li>
+            <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">Twitter</a></li>
+            <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">Facebook</a></li>
+            <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -135,7 +137,15 @@
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img class="project__img" src="./images/technocrack.jpg" alt="на экране ноутбука вебсайт" width="370">
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)" srcset="./images/project/desctop-project-one-1x.jpg 1x,
+                                              ./images/project/desctop-project-one-2x.jpg 2x.">
+                  <source media="(min-width: 768px)" srcset="./images/project/tablet-project-one-1x.jpg 1x,
+                                              ./images/project/tablet-project-one-2x.jpg 2x.">
+                  <source media="(max-width: 767px)" srcset="./images/project/mob-project-one-1x.jpg 1x,
+                                              ./images/project/mob-project-one-2x.jpg 2x.">
+                  <img src="./images/project/mob-project-one-1x.jpg" alt="на экране ноутбука вебсайт" />
+                </picture>
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -146,13 +156,25 @@
                 <p class="project__subtitle">Веб-сайт</p>
               </div>
             </a>
-
           </li>
+
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img class="project__img" src="./images/poster-new-orl.jpg" alt="постер с изображением баскетболистов"
-                  width="370">
+
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)" srcset="./images/project/desctop-project-two-1x.jpg 1x,
+                                                              ./images/project/desctop-project-two-2x.jpg 2x">
+
+                  <source media="(min-width: 768px)" srcset="./images/project/tablet-project-two-1x.jpg 1x,
+                                                              ./images/project/tablet-project-two-2x.jpg 2x">
+
+                  <source media="(max-width: 767px)" srcset="./images/project/mob-project-two-1x.jpg 1x,
+                                                              ./images/project/mob-project-two-2x.jpg 2x">
+
+                  <img src="./images/project/mob-project-two-1x.jpg" alt="постер с изображением баскетболистов" />
+                </picture>
+
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -164,10 +186,24 @@
               </div>
             </a>
           </li>
+
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img class="project__img" src="./images/restaurant-seafood.jpg" alt="логотип ресторана" width="370">
+
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)" srcset="./images/project/desctop-project-three-1x.jpg 1x,
+                                  ./images/project/desctop-project-three-2x.jpg 2x">
+
+                  <source media="(min-width: 768px)" srcset="./images/project/tablet-project-three-1x.jpg 1x,
+                                  ./images/project/tablet-project-three-2x.jpg 2x">
+
+                  <source media="(max-width: 767px)" srcset="./images/project/mob-project-three-1x.jpg 1x,
+                                  ./images/project/mob-project-three-2x.jpg 2x">
+
+                  <img src="./images/project/mob-project-three-1x.jpg" alt="логотип ресторана" />
+                </picture>
+
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -180,10 +216,24 @@
               </div>
             </a>
           </li>
+
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img class="project__img" src="./images/project-prime.jpg" alt="наушники" width="370">
+
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)" srcset="./images/project/desctop-project-four-1x.jpg 1x,
+                                  ./images/project/desctop-project-four-2x.jpg 2x">
+
+                  <source media="(min-width: 768px)" srcset="./images/project/tablet-project-four-1x.jpg 1x,
+                                  ./images/project/tablet-project-four-2x.jpg 2x">
+
+                  <source media="(max-width: 767px)" srcset="./images/project/mob-project-four-1x.jpg 1x,
+                                  ./images/project/mob-project-four-2x.jpg 2x">
+
+                  <img src="./images/project/mob-project-four-1x.jpg" alt="наушники" />
+                </picture>
+
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -195,10 +245,25 @@
               </div>
             </a>
           </li>
+
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img class="project__img" src="./images/project-boxes.jpg" alt="две коробки" width="370">
+
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)"
+                    srcset="./images/project/desctop-project-five-1x.jpg 1x,
+                                                                              ./images/project/desctop-project-five-2x.jpg 2x">
+
+                  <source media="(min-width: 768px)" srcset="./images/project/tablet-project-five-1x.jpg 1x,
+                                  ./images/project/tablet-project-five-2x.jpg 2x">
+
+                  <source media="(max-width: 767px)" srcset="./images/project/mob-project-five-1x.jpg 1x,
+                                  ./images/project/mob-project-five-2x.jpg 2x">
+
+                  <img src="./images/project/mob-project-five-1x.jpg" alt="две коробки" />
+                </picture>
+
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -210,10 +275,24 @@
               </div>
             </a>
           </li>
+
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img class="project__img" src="./images/inspiration.jpg" alt="вебсайт на экране монитора" width="370">
+
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)" srcset="./images/project/desctop-project-six-1x.jpg 1x,
+                                  ./images/project/desctop-project-six-2x.jpg 2x">
+
+                  <source media="(min-width: 768px)" srcset="./images/project/tablet-project-six-1x.jpg 1x,
+                                  ./images/project/tablet-project-six-2x.jpg 2x">
+
+                  <source media="(max-width: 767px)" srcset="./images/project/mob-project-six-1x.jpg 1x,
+                                  ./images/project/mob-project-six-2x.jpg 2x">
+
+                  <img src="./images/project/mob-project-six-1x.jpg" alt="вебсайт на экране монитора" />
+                </picture>
+
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -225,10 +304,24 @@
               </div>
             </a>
           </li>
+
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img class="project__img" src="./images/limited-edition.jpg" alt="развертка журнала" width="370">
+
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)" srcset="./images/project/desctop-project-seven-1x.jpg 1x,
+                                  ./images/project/desctop-project-seven-2x.jpg 2x">
+
+                  <source media="(min-width: 768px)" srcset="./images/project/tablet-project-seven-1x.jpg 1x,
+                                  ./images/project/tablet-project-seven-2x.jpg 2x">
+
+                  <source media="(max-width: 767px)" srcset="./images/project/mob-project-seven-1x.jpg 1x,
+                                  ./images/project/mob-project-seven-2x.jpg 2x">
+
+                  <img src="./images/project/mob-project-seven-1x.jpg" alt="развертка журнала" />
+                </picture>
+
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -240,10 +333,24 @@
               </div>
             </a>
           </li>
+
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img class="project__img" src="./images/project-lab.jpg" alt="бирка" width="370">
+
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)" srcset="./images/project/desctop-project-eight-1x.jpg 1x,
+                                  ./images/project/desctop-project-eight-2x.jpg 2x">
+
+                  <source media="(min-width: 768px)" srcset="./images/project/tablet-project-eight-1x.jpg 1x,
+                                  ./images/project/tablet-project-eight-2x.jpg 2x">
+
+                  <source media="(max-width: 767px)" srcset="./images/project/mob-project-eight-1x.jpg 1x,
+                                  ./images/project/mob-project-eight-2x.jpg 2x">
+
+                  <img src="./images/project/mob-project-eight-1x.jpg" alt="бирка" />
+                </picture>
+
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -255,11 +362,24 @@
               </div>
             </a>
           </li>
+
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img class="project__img" src="./images/growing-business.jpg" alt="человек печатает на лэптопе"
-                  width="370">
+
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)" srcset="./images/project/desctop-project-nine-1x.jpg 1x,
+                                  ./images/project/desctop-project-nine-2x.jpg 2x">
+
+                  <source media="(min-width: 768px)" srcset="./images/project/tablet-project-nine-1x.jpg 1x,
+                                  ./images/project/tablet-project-nine-2x.jpg 2x">
+
+                  <source media="(max-width: 767px)" srcset="./images/project/mob-project-nine-1x.jpg 1x,
+                                  ./images/project/mob-project-nine-2x.jpg 2x">
+
+                  <img src="./images/project/mob-project-nine-1x.jpg" alt="человек печатает на лэптопе" />
+                </picture>
+
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить

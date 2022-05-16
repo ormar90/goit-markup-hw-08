@@ -1,11 +1,11 @@
 .work__list {
   display: flex;
-  margin-right: -$imgGap;
+  margin: -$imgGap;
 }
 
 .work__item {
   flex-basis: calc((100% - 6*$imgGap)/ 3);
-  margin-right: $imgGap;
+  margin: $imgGap;
 }
 
 .work__wrap {

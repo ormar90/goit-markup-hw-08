@@ -29,6 +29,7 @@
 }
 
 .project__content {
+  flex-grow: 1;
   padding: 20px 24px;
   background: $mainWhiteColor;
   border: $projectsContentBorder;
@@ -43,7 +44,9 @@
 }
 
 .project__link {
-  display: block;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
   &:hover,
   &:focus {
