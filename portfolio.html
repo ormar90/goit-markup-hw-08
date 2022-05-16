@@ -16,14 +16,20 @@
 </head>
 
 <body>
-  <!-- header -->
   <header class="header">
     <div class="container--header container">
       <a href="#" class="logo header__logo link">Web<span class="logo--change-color">Studio</span></a>
+      <button type="button" class="burger-button" data-menu-button aria-expanded="false">
+        <svg class="burger-button__icon" width="40px" height="40px" aria-label="переключатель мобилного меню">
+          <use class="burger-button__close" href="/images/icons.svg#icon-menu-close"></use>
+          <use class="burger-button__open" href="./images/icons.svg#icon-menu-open"></use>
+        </svg>
+      </button>
+
       <nav class="pagination">
         <ul class="pagination__list list">
           <li class="pagination__item">
-            <a href="./index.html" class="pagination__link   link">Студия</a>
+            <a href="./index.html" class="pagination__link link">Студия</a>
           </li>
 
           <li class="pagination__item">
@@ -37,19 +43,64 @@
       </nav>
 
       <ul class="header-contacts list">
-        <li class="header-contacts__item"><a href="mailto:info@devstudio.com" class="header-contacts__link  link">
-            <svg class="header-contacts__icon" width="16px" height="12px">
+        <li class="header-contacts__item "><a href="mailto:info@devstudio.com"
+            class="header-contacts__link header-contacts__mail  link">
+            <svg class="header-contacts__icon " width="16px" height="12px">
               <use href="./images/icons.svg#icon-envelope"></use>
             </svg>
             info@devstudio.com</a>
         </li>
 
-        <li class="header-contacts__item"><a href="tel:+380961111111" class="header-contacts__link  link">
+        <li class="header-contacts__item"><a href="tel:+380961111111"
+            class="header-contacts__link header-contacts__tel  link">
             <svg class="header-contacts__icon" width="10px" height="16px">
               <use href="./images/icons.svg#icon-smartphone"></use>
             </svg>
-            +38 096 111 11 11</a></li>
+            +38 096 111 11 11</a>
+        </li>
       </ul>
+      <!-- mobile-menu -->
+      <div class="mobile-menu" data-menu>
+        <nav class="mobile-menu__nav">
+          <ul class="nav__list list">
+            <li class="nav__item">
+              <a href="./index.html" class="nav__link  link">Студия</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="./portfolio.html" class="nav__link  link">Портфолио</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link  link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="mobile-menu__contacts-head list">
+          <li class="contacts-head__item"><a href="tel:+380961111111"
+              class="contacts-head__link contacts-head__tel  link">
+              <svg class="contacts-head__icon" width="10px" height="16px">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a>
+          </li>
+          <li class="contacts-head__item "><a href="mailto:info@devstudio.com"
+              class="contacts-head__link contacts-head__mail  link">
+              <svg class="contacts-head__icon " width="16px" height="12px">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a>
+          </li>
+        </ul>
+
+        <ul class="mobile-menu__list list">
+          <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">Instagram</a></li>
+          <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">Twitter</a></li>
+          <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">Facebook</a></li>
+          <li class="mobile-menu__item"><a href="" class="mobile-menu__link link">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -84,7 +135,7 @@
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img src="./images/technocrack.jpg" alt="на экране ноутбука вебсайт" width="370">
+                <img class="project__img" src="./images/technocrack.jpg" alt="на экране ноутбука вебсайт" width="370">
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -100,7 +151,8 @@
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img src="./images/poster-new-orl.jpg" alt="постер с изображением баскетболистов" width="370">
+                <img class="project__img" src="./images/poster-new-orl.jpg" alt="постер с изображением баскетболистов"
+                  width="370">
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -115,7 +167,7 @@
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img src="./images/restaurant-seafood.jpg" alt="логотип ресторана" width="370">
+                <img class="project__img" src="./images/restaurant-seafood.jpg" alt="логотип ресторана" width="370">
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -131,7 +183,7 @@
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img src="./images/project-prime.jpg" alt="наушники" width="370">
+                <img class="project__img" src="./images/project-prime.jpg" alt="наушники" width="370">
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -146,7 +198,7 @@
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img src="./images/project-boxes.jpg" alt="две коробки" width="370">
+                <img class="project__img" src="./images/project-boxes.jpg" alt="две коробки" width="370">
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -161,7 +213,7 @@
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img src="./images/inspiration.jpg" alt="вебсайт на экране монитора" width="370">
+                <img class="project__img" src="./images/inspiration.jpg" alt="вебсайт на экране монитора" width="370">
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -176,7 +228,7 @@
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img src="./images/limited-edition.jpg" alt="развертка журнала" width="370">
+                <img class="project__img" src="./images/limited-edition.jpg" alt="развертка журнала" width="370">
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -191,7 +243,7 @@
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img src="./images/project-lab.jpg" alt="бирка" width="370">
+                <img class="project__img" src="./images/project-lab.jpg" alt="бирка" width="370">
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -206,7 +258,8 @@
           <li class="project__item">
             <a href="" class="project__link link">
               <div class="project__overlay">
-                <img src="./images/growing-business.jpg" alt="человек печатает на лэптопе" width="370">
+                <img class="project__img" src="./images/growing-business.jpg" alt="человек печатает на лэптопе"
+                  width="370">
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит
                   посетителю получить
@@ -224,9 +277,10 @@
     </section>
   </main>
 
+  <!-- footer -->
   <footer class="footer" id="contacts">
     <div class="container--footer container">
-      <div>
+      <div class="footer__wrap">
         <a href="" class="logo footer__logo link">Web<span class="footer__logo--change-color">Studio</span></a>
         <address>
           <ul class="footer__list list">
@@ -251,7 +305,7 @@
 
       <div class="footer__social">
         <strong class="title--footer-social title">присоединяйтесь</strong>
-        <ul class="social list">
+        <ul class="social social--footer list">
           <li class="social__item">
             <a class="social__link social__link--change-color" href="">
               <svg class="social__icon--change-color" height="20px" width="20px">
@@ -283,22 +337,26 @@
         </ul>
       </div>
 
-      <form action="#" class="subscribe">
-        <strong class="title--subscribe title">Подпишитесь на рассылку</strong>
-        <label class="subscribe__filed">
-          <input type="email" name="user-email" class="subscribe__input" placeholder=" " required>
-          <span class="subscribe__label">E-mail</span>
-        </label>
+      <div class="footer__subscribe">
+        <form action="#" class="subscribe">
+          <strong class="title--subscribe title">Подпишитесь на рассылку</strong>
+          <label class="subscribe__filed">
+            <input type="email" name="user-email" class="subscribe__input" placeholder=" " required>
+            <span class="subscribe__label">E-mail</span>
+          </label>
 
-        <button class="subscribe__button button" type="submit">Подписаться
-          <svg class="subscribe__icon">
-            <use href="./images/icons.svg#icon-send" width="24px" height="24px"></use>
-          </svg>
-        </button>
-      </form>
+          <button class="subscribe__button button" type="submit">Подписаться
+            <svg class="subscribe__icon" width="24px" height="24px">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
 
     </div>
   </footer>
+
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>

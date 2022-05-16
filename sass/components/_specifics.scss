@@ -2,7 +2,8 @@
   background-color: $secondaryBackgroundColor;
   border-radius: 4px;
   height: 120px;
-  width: 270px;
+  width: 100%;
+//   width: 270px;
   margin-bottom: 30px;
   
   display: flex;
@@ -11,13 +12,30 @@
 }
 
 .specifics__list {
-  display: flex;
-  margin-right: calc(-1 * $imgGap);
+  @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: calc(-1 * $imgGap);
+    }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    margin: -$imgGap;
+  }
 }
 
 .specifics__item {
-  flex-basis: calc(100% / 4 - $imgGap);
-  margin-right: $imgGap;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+    
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 4*$imgGap)/ 2);
+    margin: $imgGap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 8*$imgGap)/4);
+  }
 }
 
 .specifics__text {

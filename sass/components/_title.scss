@@ -1,15 +1,18 @@
 .title {
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   color: $titleColor;
+  text-align: center;
 
   &--clients {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-    color: $titleColor;
     margin-bottom: 50px;
   }
 
@@ -18,40 +21,64 @@
     margin-bottom: 20px;
     text-transform: uppercase;
     color: $mainWhiteColor;
+
+  @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
 
   &--hero {
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 30px;
-    width: 696px;
+    margin-bottom: 21px;
+    width: 100%;
     color: $mainWhiteColor;
     font-weight: 900;
+    font-size: 26px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+
+  @media screen and (max-width: 480px) {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+
+  @media screen and (min-width: 768px) {
+      margin-bottom: 30px;
+      padding-right: 190px;
+      padding-left: 190px;
+    }
+  
+  @media screen and (min-width: 1200px) {
     font-size: 44px;
     line-height: 1.4;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.06em;
   }
+}
 
-  &--modal {
-    display: block;
-    text-align: center;
-    margin-bottom: 12px;  
-    font-size: 20px;
-    line-height: 1.15;
-  }
+//   &--modal {
+//     display: block;
+//     text-align: center;
+//     margin-bottom: 12px;  
+//     font-size: 20px;
+//     line-height: 1.15;
+//   }
 
   &--project {
+    text-align: left;
     margin-bottom: 4px;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
   }
 
-  &--specifics {
+  &--specifics {    
     margin-bottom: 10px;
     text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
 
   &--subscribe {
@@ -59,14 +86,20 @@
     margin-bottom: 20px;
     text-transform: uppercase;
     color: $mainWhiteColor;
+    @media screen and (min-width: 1200px) {
+        flex-basis: 100%;
+        text-align: left;
+      }
   }
 
   &--team {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.18;
     margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
-    text-align: center;
   }
 
   &--work {

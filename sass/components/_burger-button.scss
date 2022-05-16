@@ -1,0 +1,38 @@
+.burger-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 20;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.burger-button__icon {
+  fill: $titleColor;
+
+  .burger-button:hover &,
+  .burger-button:focus &  {
+      fill: $accentColor;
+    }
+
+  @include transition (fill);
+}
+
+.burger-button .burger-button__close {
+  display: none;
+}
+
+.burger-button.is-open .burger-button__close {
+  display: block;
+}
+
+.burger-button.is-open .burger-button__open {
+  display: none;
+}

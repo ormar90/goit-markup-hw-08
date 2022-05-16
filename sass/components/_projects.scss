@@ -1,15 +1,31 @@
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-
-  margin-left: calc(-1 * $imgGap);
-  margin-top: calc(-1 * $imgGap);
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -$imgGap;;
+  }
 }
 
 .project__item {
-  flex-basis: calc(100% / 3 - $imgGap);
-  margin-left: $imgGap;
-  margin-top: $imgGap;
+  @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 4*$imgGap)/2);
+    margin: $imgGap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 6*$imgGap)/3);
+    margin: $imgGap;
+  }
+}
+
+.project__img {
+  width: 100%;
 }
 
 .project__content {
