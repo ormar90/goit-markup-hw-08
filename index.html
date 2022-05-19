@@ -64,7 +64,7 @@
         <nav class="mobile-menu__nav">
           <ul class="nav__list list">
             <li class="nav__item">
-              <a href="./index.html" class="nav__link  link">Студия</a>
+              <a href="./index.html" class="nav__link nav__link--active link">Студия</a>
             </li>
 
             <li class="nav__item">
@@ -180,7 +180,7 @@
             <div class="work__wrap">
               <img srcset="./images/work/work-one-1x.jpg 1x,
                         ./images/work/work-one-2x.jpg 2x" src="./images/work/work-one-1x.jpg"
-                alt="человек пишет разметку сайта" width="370px" height="294px" />
+                alt="человек пишет разметку сайта" />
               <p class="work__subtitle">Десктопные приложения</p>
             </div>
           </li>
@@ -188,8 +188,8 @@
           <li class="work__item">
             <div class="work__wrap">
               <img srcset="./images/work/work-two-1x.jpg 1x,
-                        ./images/work/work-two-2x.jpg 2x" \ src="./images/work/work-two-1x.jpg"
-                alt="человек пишет разметку сайта" width="370px" height="294px" />
+                        ./images/work/work-two-2x.jpg 2x" src="./images/work/work-two-1x.jpg"
+                alt="человек пишет разметку сайта" />
               <p class="work__subtitle">Мобильные приложения</p>
             </div>
           </li>
@@ -198,7 +198,7 @@
             <div class="work__wrap">
               <img srcset="./images/work/work-three-1x.jpg 1x,
                         ./images/work/work-three-2x.jpg 2x" src="./images/work/work-three-1x.jpg"
-                alt="человек пишет разметку сайта" width="370px" height="294px" />
+                alt="человек пишет разметку сайта" />
               <p class="work__subtitle">Дизайнерские решения</p>
             </div>
           </li>
@@ -474,68 +474,70 @@
   <footer class="footer" id="contacts">
     <div class="container--footer container">
       <div class="footer__wrap">
-        <a href="" class="logo footer__logo link">Web<span class="footer__logo--change-color">Studio</span></a>
-        <address>
-          <ul class="footer__list list">
-            <li class="footer__item">
-              <a href="https://goo.gl/maps/eR7fZNgkEcZo2k5L9" target="_blank" class="footer__link--addres link">г.
-                Киев,
-                пр-т
-                Леси
-                Украинки, 26</a>
-            </li>
+        <div class="address__wrap">
+          <a href="" class="logo footer__logo link">Web<span class="footer__logo--change-color">Studio</span></a>
+          <address class="footer__address">
+            <ul class="footer__list list">
+              <li class="footer__item">
+                <a href="https://goo.gl/maps/eR7fZNgkEcZo2k5L9" target="_blank"
+                  class="footer__link footer__link--addres link">г.
+                  Киев,
+                  пр-т
+                  Леси
+                  Украинки, 26</a>
+              </li>
 
-            <li class="footer__item">
-              <a href="mailto:info@example.com" class="footer__link link">info@example.com</a>
-            </li>
+              <li class="footer__item">
+                <a href="mailto:info@example.com" class="footer__link link">info@example.com</a>
+              </li>
 
-            <li class="footer__item">
-              <a href="tel:+380991111111" class="footer__link link">+38 099 111 11 11</a>
+              <li class="footer__item">
+                <a href="tel:+380991111111" class="footer__link link">+38 099 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+
+        <div class="footer__social">
+          <strong class="title--footer-social title">присоединяйтесь</strong>
+          <ul class="social social--footer list">
+            <li class="social__item">
+              <a class="social__link social__link--change-color" href="">
+                <svg class="social__icon--change-color" height="20px" width="20px">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--change-color" href="">
+                <svg class="social__icon--change-color" height="20px" width="20px">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--change-color" href="">
+                <svg class="social__icon--change-color" height="20px" width="20px">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--change-color" href="">
+                <svg class="social__icon--change-color" height="20px" width="20px">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </address>
-      </div>
-
-      <div class="footer__social">
-        <strong class="title--footer-social title">присоединяйтесь</strong>
-        <ul class="social social--footer list">
-          <li class="social__item">
-            <a class="social__link social__link--change-color" href="">
-              <svg class="social__icon--change-color" height="20px" width="20px">
-                <use href="./images/icons.svg#icon-instagram"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--change-color" href="">
-              <svg class="social__icon--change-color" height="20px" width="20px">
-                <use href="./images/icons.svg#icon-twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--change-color" href="">
-              <svg class="social__icon--change-color" height="20px" width="20px">
-                <use href="./images/icons.svg#icon-facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--change-color" href="">
-              <svg class="social__icon--change-color" height="20px" width="20px">
-                <use href="./images/icons.svg#icon-linkedin"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        </div>
       </div>
 
       <div class="footer__subscribe">
         <form action="#" class="subscribe">
           <strong class="title--subscribe title">Подпишитесь на рассылку</strong>
           <label class="subscribe__filed">
-            <input type="email" name="user-email" class="subscribe__input" placeholder=" " required>
-            <span class="subscribe__label">E-mail</span>
+            <input type="email" name="user-email" class="subscribe__input" placeholder="E-mail" required>
           </label>
 
           <button class="subscribe__button button" type="submit">Подписаться
@@ -545,7 +547,6 @@
           </button>
         </form>
       </div>
-
     </div>
   </footer>
 

@@ -14,11 +14,21 @@
 }
 
 .menu__list {
-  margin: -15px -8px -15px -8px;
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+    @media screen and (max-width: 767px) {
+      margin: -15px -8px -15px -8px;
+    }  
 }
 
 .menu__item {
-  margin: 15px 8px 15px 8px;
+  &:not(:last-child) {
+      margin-right: 8px;
+    }
+    @media screen and (max-width: 767px) {
+        margin: 15px 8px 15px 8px;
+    } 
 }
 
 .menu__button {

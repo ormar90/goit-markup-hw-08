@@ -1,6 +1,6 @@
 .footer__subscribe {
   @media screen and (min-width: 768px) {
-    flex-basis: 450px;
+    flex-basis: 65%;
     justify-content: center;
   }
 
@@ -17,8 +17,6 @@
 }
 
 .subscribe__filed {
-  position: relative;
-  display: block;
   @media screen and (min-width: 1200px) {
       flex-basis: 358px;
       height: 50px;
@@ -41,26 +39,21 @@
   outline: transparent;
 
   @include transition (background-color);
-}
 
-.subscribe__label {
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
-
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-
-  color: $mainWhiteColor;
-
-  .subscribe__input:focus+&,
-  .subscribe__input:not(:placeholder-shown)+& {
-    opacity: 0;
-    @include transition (opacity);
+  @media screen and (min-width: 768px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+    width: 60%;
   }
+
+  @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+    }
 }
+
 .subscribe__button {
   display: flex;
   align-items: center;

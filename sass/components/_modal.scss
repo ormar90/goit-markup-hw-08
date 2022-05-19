@@ -160,7 +160,6 @@
 
 .modal__agreement {
   display: block;
-  text-align: center;
   margin-bottom: 30px;
 }
 
@@ -206,8 +205,14 @@
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: $titleColor;
+}
 
+.agreement__link {
+  text-decoration: none;
   &:link {
+      color: $accentColor;
+    }
+  &:visited {
     color: $accentColor;
   }
 }

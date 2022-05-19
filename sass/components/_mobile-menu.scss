@@ -4,13 +4,14 @@
   }
 
   &.is-open {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-  }
+    @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }    
+    }
   position: fixed;
-  overflow: scroll;
+  overflow-y: scroll;
   display: none;
   top: 0;
   left: 0;
@@ -26,55 +27,18 @@
   }  
 }
 
-.mobile-menu__wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-basis: calc(100%/3);
-}
 
-.mobile-menu__contacts-head {
-  display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-basis: 65%;
-}
 
-.mobile-menu__nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-basis: 100%;
-}
-
-.nav__list {
-  display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-basis: 50%;
-}
-
-.mobile-menu__list {
-  display: flex;
-}
-
-.mobile-menu__item {
+.nav__item {
   &:not(:last-child) {
-    padding-right: 10px;
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
-  }
-  &:not(:first-child) {
-    padding-left: 10px;
-  }
+    margin-bottom: 32px;
+  }  
 }
 
 .mobile-menu__link {
   color: $accentColor;
   font-size: 18px;
   line-height: 1.22;
-  @media screen and (max-width: 420px) {
-    font-size: 14px;
-  }
 }
 
 .nav__link {
@@ -97,6 +61,16 @@
   }
 }
 
+.mobile-menu__contacts-head {
+  margin-bottom: 64px;
+}
+
+.contacts-head__item {
+  &:first-child {
+    margin-bottom: 32px;
+  }
+}
+
 .contacts-head__tel {
   font-weight: 500;
   font-size: 34px;
@@ -115,6 +89,28 @@
 
 .contacts-head__icon {
   display: none;
+}
+
+.mobile-menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  // margin-right: -10px;
+}
+
+.mobile-menu__item {
+  margin-left: 10px;
+  &:not(:last-child) {
+    &::after {
+      content: " ";
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    margin-left: 10px;
+    }
+    
+  }
+  // &:not(:first-child) {
+  //   padding-left: 10px;
+  // }
 }
 
 body.is-open {

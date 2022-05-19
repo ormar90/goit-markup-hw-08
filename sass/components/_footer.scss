@@ -5,84 +5,86 @@
 }
 
 .footer__wrap {
-  margin-bottom: 60px;
   @media screen and (min-width: 768px) {
-    flex-basis: calc(100%/2);
+    display: flex;
+    justify-content: space-around;
   }
-  
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
   @media screen and (min-width: 1200px) {
-    flex-basis: calc(50%/2);
-    margin-bottom: 0;
+    flex-basis: 50%;
+    align-items: baseline;
     justify-content: start;
   }
 }
 
 .footer__logo {
-  text-align: center;
   display: block;
   margin-bottom: 20px;
+  
+  @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
 
   &--change-color {
     color: $mainWhiteColor;
   }
-  
-  @media screen and (min-width: 1200px) {
-    text-align: left;
+}
+
+.footer__link {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  color: $footerAddressColor;
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+
+  &--addres {
+    color: $mainWhiteColor;
+    @include transition (color);
+      &:hover,
+      &:focus {
+        color: $accentColor;
+      }
+  }
+  @include transition (color);
+}
+
+.footer__item {
+  &:not(:last-child){
+    margin-bottom: 8px;
   }
 }
 
 .footer__list {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.7;
+  @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
 }
 
-.footer__item {
-  display: block;
-  text-align: center;
-  &:not(:last-child) {
-      margin-bottom: 8px;
-  }
-
+.address__wrap {
+  @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
   @media screen and (min-width: 1200px) {
-    text-align: left;
+    margin-right: 85px;
   }
 }
 
-.footer__link {
-  color: $footerAddressColor;
-
-  &:hover,
-  &:focus {
-    color: $accentColor;
+  .social__link--change-color {
+    background-color: $footerIconBackgroundColor;
   }
-  
-  @include transition (color);
-}
 
-.footer__link--addres {
-  color: $mainWhiteColor;
-  @include transition (color);
-
-  &:hover,
-  &:focus {
-    color: $accentColor;
+  .social__icon--change-color {
+    fill: $mainWhiteColor;
   }
-}
 
-.footer__social {
-  margin-bottom: 60px;
-  flex-basis: calc(100%/2);
-  
-  @media screen and (min-width: 1200px) {
-    flex-basis: calc(50%/2);
-  }
-}
 
-.social__link--change-color {
-  background-color: $footerIconBackgroundColor;
-}
 
-.social__icon--change-color {
-  fill: $mainWhiteColor;
-}
+
+
