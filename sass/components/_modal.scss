@@ -10,7 +10,7 @@
   left: 0;
   background-color: $backdrop;
 
-  @include transition2 (opacity, visibility)
+  @include transition2 (opacity, visibility);
 }
 
 .is-hidden {
@@ -20,6 +20,9 @@
 }
 
 .is-hidden .modal {
+  @media screen and (max-width: 1199px) {
+      transform: scale(1.5);
+    }
   transform: translate(-50%, -50%) scale(1.5);
 }
 

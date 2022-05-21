@@ -1,33 +1,41 @@
 .mobile-menu {
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  left: 0; 
+
+  visibility: hidden;
+  opacity: 0;  
+  pointer-events: none;
+  overflow-y: scroll;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  padding: 40px 40px;
+  background-color: $mainWhiteColor;
+
+  @include transition2 (opacity, visibility);
 
   &.is-open {
-    @media screen and (max-width: 767px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }    
+      @media screen and (max-width: 767px) {
+        visibility: visible;
+        opacity: 1;  
+        pointer-events: fill;  
+      }
     }
-  position: fixed;
-  overflow-y: scroll;
-  display: none;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  padding: 48px 40px;
-  background-color: $mainWhiteColor;
-  
 
+  @media screen and (min-width: 768px) {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+  
   @media screen and (max-width: 420px) {
     padding: 20px 5px;
   }  
 }
-
-
 
 .nav__item {
   &:not(:last-child) {
@@ -95,7 +103,6 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: -10px;
-  // margin-right: -10px;
 }
 
 .mobile-menu__item {
@@ -108,14 +115,11 @@
     }
     
   }
-  // &:not(:first-child) {
-  //   padding-left: 10px;
-  // }
 }
 
 body.is-open {
-  position:fixed;
-  z-index: 0;
-  overflow: hidden;
-  width: 100%;
+  @media screen and (max-width: 767px) {
+    overflow: hidden;
+  }
+  
 }
